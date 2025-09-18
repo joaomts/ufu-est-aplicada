@@ -1,0 +1,30 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{Lista de Figuras}{2}{Doc-Start}%
+\contentsline {section}{Lista de Tabelas}{3}{Doc-Start}%
+\contentsline {section}{\numberline {1}Introdução}{4}{section.1}%
+\contentsline {section}{\numberline {2}Justificativa}{4}{section.2}%
+\contentsline {section}{\numberline {3}Objetivos}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Objetivos Específicos}{4}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Metodologia}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Fonte de Dados e Ferramentas}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tratamento dos Dados}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Pré-processamento e Tratamento dos Dados}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Engenharia de Atributos para Sobrevivência}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Modelagem Estatística}{7}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Métodos Não-Paramétricos}{7}{subsubsection.4.5.1}%
+\contentsline {paragraph}{Estimador de Kaplan-Meier}{8}{paragraph*.5}%
+\contentsline {paragraph}{Teste Log-Rank}{8}{paragraph*.6}%
+\contentsline {subsubsection}{\numberline {4.5.2}Métodos Semi-Paramétricos}{8}{subsubsection.4.5.2}%
+\contentsline {paragraph}{Modelo de Riscos Proporcionais de Cox}{8}{paragraph*.7}%
+\contentsline {subsection}{\numberline {4.6}Avaliação dos Modelos}{9}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Resultados}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Análise Exploratória de Dados (AED)}{9}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Estatísticas Descritivas}{9}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Distribuição das Variáveis Categóricas}{10}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Análise Bivariada vs. Churn}{10}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2}Análise de Sobrevivência}{12}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Análise Exploratória das Variáveis de Sobrevivência}{12}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Análise Não-Paramétrica: Estimador de Kaplan-Meier}{13}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Análise Semi-Paramétrica: Modelo de Riscos Proporcionais de Cox}{15}{subsubsection.5.2.3}%
+\contentsline {section}{\numberline {6}Conclusão}{16}{section.6}%
+\contentsfinish 

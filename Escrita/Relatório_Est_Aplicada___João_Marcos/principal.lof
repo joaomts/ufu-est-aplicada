@@ -1,0 +1,9 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Distribuição dos valores da coluna \texttt {Returns} antes do tratamento dos dados ausentes.}}{6}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Distribuição dos valores da coluna \texttt {Returns} após a substituição de valores nulos por 0.}}{7}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Distribuição das variáveis categóricas: Categoria de Produto, Método de Pagamento, Gênero e Churn.}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Análise bivariada das variáveis em relação ao Churn.}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Análise Bivariada de covariáveis vs. a variável \texttt {evento}.}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Análise Bivariada de covariáveis vs. a variável \texttt {duracao}.}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Curva de Sobrevivência de Clientes (Estimador de Kaplan-Meier).}}{14}{figure.caption.13}%
+\contentsfinish 
