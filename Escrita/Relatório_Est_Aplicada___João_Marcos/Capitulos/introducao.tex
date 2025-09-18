@@ -1,14 +1,23 @@
-\section{Introdução}
+\chapter{Introdução}
+\label{cap:introducao}
 
-Bom desempenho escolar pode ser um divisor de águas na vida de uma pessoa, pode permitir o acesso a uma melhor universidade, pode ser munição para desenvolver ideias novas e além de tudo ajuda a preparar a pessoa para a vida adulta. Com isso em mente, é de fundamental importância identificar fatores que possam determinar ou interferir no desempenho escolar. Modelos construídos a partir destes fatores, via aprendizado de máquina, o que inclui redes neurais bayesianas, podem ser úteis na previsão do desempenho de indivíduos. A dúvida que fica é, como saber se uma pessoa irá bem ou não em seus estudos no colégio.
+A análise de comportamento de compra dos consumidores em plataformas de e-commerce tem se tornado uma área central de pesquisa devido à crescente competitividade no mercado digital e à importância de entender as preferências dos clientes para melhorar a experiência de compra e maximizar a rentabilidade. O comportamento do cliente online, especialmente no que diz respeito ao tempo e à frequência com que ele realiza compras, pode fornecer insights valiosos sobre a sua lealdade e intenção de compra. No entanto, prever com precisão quando um cliente fará uma compra ou quando ele se tornará inativo representa um desafio significativo para os profissionais da estatística.
 
-Uma ferramenta que poderíamos usar para resolver nosso problema seria um modelo de aprendizado de maquina supervisionado como uma regressão linear ou uma arvore de decisão, esses modelos nada mais são do que modelos que permitem o computador a aprender, e aprender é o processo de achar padrões estatísticos ou outros padrões nos dados \cite{nasteski2017overview}. 
+A questão central deste estudo é como modelar o tempo até a próxima compra com base no comportamento ou características do cliente, utilizando dados de um conjunto e-commerce. Além disso, como pode ser previsto a probabilidade de um cliente não comprar novamente (abandono) dentro de um intervalo de tempo é outra questão interessante. Esses questionamentos são relevantes pois suas respostas podem contribuir para o entendimento da dinâmica de compra, prever a rotatividade de clientes e otimizar a alocação de recursos de marketing.
 
+\section{Justificativa}
+A abordagem do problema de prever o comportamento de compra dos consumidores em e-commerce se justifica pela crescente importância de compreender as dinâmicas de consumo no contexto digital. A capacidade de prever quando um cliente realizará uma nova compra ou quando pode abandonar a plataforma permite que as empresas ajustem suas estratégias de marketing de forma mais eficiente, direcionando campanhas personalizadas, otimizando o estoque e melhorando a experiência do cliente.
 
+A utilização da análise de sobrevivência é particularmente adequada para esse tipo de estudo, pois permite modelar o tempo até a ocorrência de um evento específico, como a realização de uma compra ou o abandono de um cliente. Essa abordagem leva em consideração a censura, ou seja, a situação em que o evento de interesse não ocorre dentro do período de observação, fornecendo uma metodologia robusta para a previsão de comportamentos de compra e uma compreensão mais aprofundada dos fatores que influenciam a lealdade e a rotatividade dos clientes.
 
-Contudo, vamos partir para uma abordagem utilizando redes neurais, as redes neurais são compostas por camadas de um nó, contendo uma camada de entrada, uma ou mais camadas ocultas e uma camada de saída. Cada nó, ou neurônio artificial, conecta-se a outro e tem um peso e um limite associados \cite{redes_neurais}.  
+\section{Objetivos}
+O objetivo principal deste estudo é desenvolver um modelo preditivo utilizando técnicas de análise de sobrevivência para prever o comportamento de compra dos clientes em um ambiente de e-commerce, a fim de fornecer insights valiosos para otimização de estratégias de marketing e aumento da retenção de clientes.
 
-
-Para realizar este estudo será utilizado uma rede neural bayesiana (RNB) a fim de criar um modelo capaz de prever se um aluno irá bem ou não nas matérias do colégio, tal modelo pode ser capaz de auxiliar a escola ou os pais a agirem previamente com o aluno para reverter os casos de mal desempenho. A RNB assim como uma rede neural comum é uma forte técnica de modelagem, porém, a bayesiana tem como vantagem permitir considerar a distribuição de todas as respostas \cite{DataBricks}. Usaremos o software R \cite{R} e o python \cite{van2014python} para o desenvolvimento do estudo.
-
-Os dados para o desenvolvimento desse estudo são fictícios e foram retirados do Kaggle \cite{kaggle}, porem apesar de serem fictícios é interessante notar que ele traz apenas variável que são de fácil coleta o que permitiria a implementação do modelo na vida real.
+\subsection{Objetivos Específicos}
+\begin{itemize}
+	\item Obter e preparar os dados do conjunto \textit{E-commerce Customer Behavior and Purchase Dataset};
+	\item Realizar o pré-processamento dos dados, incluindo a limpeza, transformação e seleção das variáveis relevantes para a análise;
+	\item Aplicar a análise de sobrevivência, utilizando o estimador de Kaplan-Meier e o modelo de Cox, para identificar os fatores que influenciam o comportamento de compra e o tempo até a próxima compra;
+	\item Avaliar a performance dos modelos gerados, utilizando métricas adequadas como o teste Log-Rank e o Índice de Concordância;
+	\item Interpretar os resultados para oferecer recomendações práticas para as empresas de e-commerce.
+\end{itemize}
