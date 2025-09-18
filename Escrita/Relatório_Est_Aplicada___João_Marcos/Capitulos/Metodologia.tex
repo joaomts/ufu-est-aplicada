@@ -1,0 +1,68 @@
+\section{Metodologia}
+No desenvolvimento desta pesquisa foram utilizados modelos de machine learning na tentativa de se obter material comparativo entre métodos mais tradicionais de modelagem e uma rede neural bayesiana.
+
+O Conjunto de dados é fictício, mas serve como motivação para futuras pesquisas com dados reais acerca deste tema, de fato o entendimento do que define um bom desempenho escolar é um tema que não deve ser negligênciado por aqueles que visão melhorar a educação como um todo.
+
+
+\subsection{Tratamento dos Dados}
+O conjunto de dados utilizado contém 250.000 registros, representando transações de compra, e é composto por 13 variáveis iniciais. 
+
+\begin{table}[h!]
+\centering
+\caption{Dicionário de dados com as variáveis utilizadas na análise.}
+\label{tab:dicionario_dados}
+\begin{tabular}{lll}
+\toprule
+\textbf{Nome da Coluna} & \textbf{Descrição} & \textbf{Observações / Tipo de Dado} \\
+\midrule
+Customer ID           & Identificador numérico único para cada cliente.            & Numérico (Inteiro)                            \\
+Purchase Date         & Data e hora exatas em que a transação foi realizada.       & Data/Hora (Datetime)                          \\
+Product Category      & Categoria do produto comprado (ex: 'Electronics').         & Categórico (Texto)                            \\
+Product Price         & Preço de uma única unidade do produto.                     & Numérico (Float)                              \\
+Quantity              & Número de unidades do produto compradas.                   & Numérico (Inteiro)                            \\
+Total Purchase Amount & Valor total da transação (valor do "carrinho").            & Numérico (Float)                              \\
+Payment Method        & Método de pagamento utilizado (ex: 'Credit Card').         & Categórico (Texto)                            \\
+Customer Age          & Idade do cliente.                                          & Numérico (Inteiro)                            \\
+Returns               & Indica se a compra foi devolvida (1) ou não (0).           & Binário (0/1), Possui valores faltantes       \\
+Customer Name         & Nome do cliente.                                           & Identificador (Texto), Remover para modelagem \\
+Age                   & Idade do cliente.                                          & Numérico (Inteiro)                            \\
+Gender                & Gênero do cliente (ex: 'Male', 'Female').                  & Categórico (Texto)                            \\
+Churn                 & Indica se o cliente abandonou a plataforma (1) ou não (0). & Binário (0/1), Variável-Alvo                 
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{flushleft}
+\footnotesize Fonte: Elaborado pelo autor (2025).
+\end{flushleft}
+
+O primeiro passo consistiu na preparação dos dados para a análise. A coluna \texttt{Purchase Date}, que estava em formato de texto (\textit{object}), foi convertida para o tipo \texttt{datetime}, permitindo a manipulação de datas e a ordenação cronológica das transações.
+
+Durante a inspeção inicial, observou-se que as colunas \texttt{Customer Age} e \texttt{Age} eram idênticas, indicando uma redundância. Para evitar multicolinearidade e simplificar o modelo, a coluna \texttt{Customer Age} foi removida.
+
+Um ponto de atenção foi a coluna \texttt{Returns}, que indica se uma compra foi devolvida (1) ou não (0). Esta variável possuía um volume significativo de valores ausentes, correspondendo a 19\% do total de registros. A Figura \ref{fig:returns_antes} ilustra a distribuição dos valores, incluindo os ausentes (NaN).
+
+\begin{figure}[h!]
+	\centering
+	% Substitua 'distribuicao_returns_antes.png' pelo nome do seu arquivo de imagem
+	\includegraphics[width=0.7\textwidth]{Imagens/distribuicao_returns_antes.png}
+	\caption{Distribuição dos valores da coluna \texttt{Returns} antes do tratamento dos dados ausentes.}
+	\label{fig:returns_antes}
+\end{figure}
+\begin{flushleft}
+\footnotesize Fonte: Elaborado pelo autor (2025).
+\end{flushleft}
+
+Para o tratamento dos dados faltantes, trabalhou-se com a premissa de que a ausência de um registro de devolução implica que a devolução não ocorreu. Esta é uma abordagem comum quando a documentação do processo de registro de dados não está disponível. Portanto, os valores nulos foram substituídos por 0 (não houve devolução). Após a substituição, a distribuição da variável foi alterada, como pode ser visto na Figura \ref{fig:returns_depois}.
+
+\begin{figure}[h!]
+	\centering
+	% Substitua 'distribuicao_returns_depois.png' pelo nome do seu arquivo de imagem
+	\includegraphics[width=0.7\textwidth]{Imagens/distribuicao_returns_depois.png}
+	\caption{Distribuição dos valores da coluna \texttt{Returns} após a substituição de valores nulos por 0.}
+	\label{fig:returns_depois}
+\end{figure}
+\begin{flushleft}
+\footnotesize Fonte: Elaborado pelo autor (2025).
+\end{flushleft}
+
+Com os dados limpos e preparados, a próxima etapa foi a realização da análise exploratória para identificar padrões e relações entre as variáveis.
