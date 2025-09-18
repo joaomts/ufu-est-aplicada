@@ -1,0 +1,33 @@
+\section{Metodologia}
+
+
+A análise de sobrevivência é uma abordagem estatística amplamente utilizada para estudar o tempo até a ocorrência de um evento de interesse, como morte, falha de um sistema ou recuperação de uma doença, ou ainda, compra realizada por um cliente. No contexto não-paramétrico, essa análise não faz suposições rígidas sobre a distribuição subjacente dos tempos de sobrevivência, sendo particularmente útil em cenários onde tais pressupostos não podem ser validados.
+
+O método Kaplan-Meier é uma  técnica não-paramétricas muito comuns. Ele permite a estimativa da função de sobrevivência, que representa a probabilidade de um indivíduo sobreviver além de um determinado tempo. A função é construída com base em intervalos definidos pelos tempos de falha observados, ajustando a probabilidade de sobrevivência em cada etapa pelo número de indivíduos ainda em risco. O Kaplan-Meier é especialmente útil em dados censurados, nos quais informações completas sobre o tempo até o evento não estão disponíveis para todos os indivíduos da amostra (Kaplan \& Meier, 1958) \cite{kaplan1958nonparametric}.
+
+Outro método importante é o teste de log-rank, usado para comparar funções de sobrevivência entre dois ou mais grupos. Esse teste avalia se há diferença significativa entre as curvas de sobrevivência, assumindo que os riscos são proporcionais ao longo do tempo (Mantel, 1966). Ele é amplamente aplicado em estudos clínicos para comparar tratamentos ou condições de saúde.
+
+Os métodos não-paramétricos de análise de sobrevivência possuem vantagens notáveis, incluindo a flexibilidade e a capacidade de lidar com censuras. No entanto, apresentam limitações, como a dificuldade de incorporar múltiplas covariáveis, o que frequentemente exige o uso de modelos semi-paramétricos ou paramétricos, como o modelo de riscos proporcionais de Cox (Cox, 1972) \cite{cox1972regression}.
+
+
+
+
+ Recentemente, métodos baseados em aprendizado de máquina, como as árvores de decisão e florestas aleatórias, têm sido aplicados com sucesso para lidar com dados de sobrevivência devido à sua flexibilidade e capacidade de capturar relações não lineares entre variáveis.
+
+Para análise com árvores de decisão, utiliza-se a extensão da metodologia para dados censurados, como a ``Survival Tree'' baseada no algoritmo CART (Classification and Regression Tree). Este método adapta os critérios de divisão, como o índice de Gini ou a redução da variância, para maximizar a separação em termos de risco entre os nós, utilizando métricas específicas para dados de sobrevivência, como a estatística log-rank ou a redução na discrepância de Kaplan-Meier entre subgrupos (Therneau et al., 1990) \cite{therneau1990martingale}.
+
+As florestas aleatórias para dados de sobrevivência, conhecidas como Random Survival Forests (RSF), são uma generalização das florestas aleatórias introduzida por Breiman (2001) \cite{breiman2001random} e posteriormente adaptada para dados de sobrevivência por Ishwaran et al. (2007) \cite{ishwaran2007random}. Nesse método, diversas árvores de decisão são construídas a partir de amostras bootstrap dos dados, com divisões realizadas de forma aleatória e baseadas em critérios específicos de sobrevivência. Cada árvore fornece uma estimativa da função de risco cumulativo, e os resultados são agregados para melhorar a robustez e reduzir o viés.
+
+A validação dos modelos é feita utilizando técnicas como validação cruzada ou separação dos dados em conjuntos de treinamento e teste. Métricas específicas para análise de sobrevivência, como a C-index (índice de concordância), são utilizadas para avaliar o desempenho dos modelos em predizer a ordem dos tempos de sobrevivência (Harrell et al., 1982) \cite{harrell1982evaluating}. Além disso, gráficos de Kaplan-Meier podem ser usados para visualizar os riscos entre os grupos identificados.
+
+As florestas aleatórias apresentam vantagens significativas em relação às árvores de decisão individuais, incluindo maior precisão e estabilidade devido à agregação de múltiplas árvores. Entretanto, ambas as abordagens são sensíveis à escolha de hiperparâmetros, como o número de árvores e o número mínimo de observações por nó terminal, que devem ser ajustados de forma adequada por meio de técnicas de otimização.
+
+
+
+
+
+
+
+As análise serão implemetadas no ambiente de programação  Python que possui bibliotecas específicas para o tipo de análise prevista neste projeto como, por exemplo, a biblioteca \textit{lifelines}.
+
+

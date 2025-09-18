@@ -1,0 +1,14 @@
+\section{Introdução}
+
+Bom desempenho escolar pode ser um divisor de águas na vida de uma pessoa, pode permitir o acesso a uma melhor universidade, pode ser munição para desenvolver ideias novas e além de tudo ajuda a preparar a pessoa para a vida adulta. Com isso em mente, é de fundamental importância identificar fatores que possam determinar ou interferir no desempenho escolar. Modelos construídos a partir destes fatores, via aprendizado de máquina, o que inclui redes neurais bayesianas, podem ser úteis na previsão do desempenho de indivíduos. A dúvida que fica é, como saber se uma pessoa irá bem ou não em seus estudos no colégio.
+
+Uma ferramenta que poderíamos usar para resolver nosso problema seria um modelo de aprendizado de maquina supervisionado como uma regressão linear ou uma arvore de decisão, esses modelos nada mais são do que modelos que permitem o computador a aprender, e aprender é o processo de achar padrões estatísticos ou outros padrões nos dados \cite{nasteski2017overview}. 
+
+
+
+Contudo, vamos partir para uma abordagem utilizando redes neurais, as redes neurais são compostas por camadas de um nó, contendo uma camada de entrada, uma ou mais camadas ocultas e uma camada de saída. Cada nó, ou neurônio artificial, conecta-se a outro e tem um peso e um limite associados \cite{redes_neurais}.  
+
+
+Para realizar este estudo será utilizado uma rede neural bayesiana (RNB) a fim de criar um modelo capaz de prever se um aluno irá bem ou não nas matérias do colégio, tal modelo pode ser capaz de auxiliar a escola ou os pais a agirem previamente com o aluno para reverter os casos de mal desempenho. A RNB assim como uma rede neural comum é uma forte técnica de modelagem, porém, a bayesiana tem como vantagem permitir considerar a distribuição de todas as respostas \cite{DataBricks}. Usaremos o software R \cite{R} e o python \cite{van2014python} para o desenvolvimento do estudo.
+
+Os dados para o desenvolvimento desse estudo são fictícios e foram retirados do Kaggle \cite{kaggle}, porem apesar de serem fictícios é interessante notar que ele traz apenas variável que são de fácil coleta o que permitiria a implementação do modelo na vida real.

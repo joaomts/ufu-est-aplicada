@@ -1,0 +1,56 @@
+\documentclass[12pt,openright]{paper}
+
+% Pacote de estilo que tem por finalidade carregar pacotes do LaTeX
+% bem como definir configurações do texto da monografia. 
+%====================================================================
+\usepackage{estilo}
+
+\makenomenclature
+
+\begin{document}
+\tolerance=5000
+
+
+\capa
+{Previsão de Comportamento de Compra de Clientes em E-commerce: Aplicação de Modelos Estatísticos de Sobrevivência}
+{João Marcos de Souza Matos}
+{2025/1}
+{José Waldemar da Silva}
+
+\printnomenclature
+
+\onehalfspacing
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{cabecalhorodape}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+
+
+\input{introducao.tex}
+
+\newpage
+\input{justificativa.tex}
+
+\newpage
+\input{objetivos.tex}
+
+\newpage
+\input{Metodologia.tex}
+
+\newpage
+\input{resultados_esperados}
+
+\newpage
+\input{cronograma_atividades}
+
+\newpage
+\def\thispagestyle#1{}
+%\bibliographystyle{babplain-fl}
+\bibliographystyle{bababbrv-lf}
+\bibliography{bibliografia}
+
+\end{document}
